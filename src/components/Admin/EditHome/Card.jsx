@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {Card} from "react-bootstrap"
 
-export default function Home ({label, article}){
+export default function Home ({title, text}){
 
     const borderStyleUnhovered = {
         borderStyle: " solid",
@@ -45,8 +45,8 @@ export default function Home ({label, article}){
         style={borderStyle}
         >
         <Card.Body style={innerBorder}>
-        <Card.Title className="p-3" style={innerColor}>{label}</Card.Title>
-        <Card.Text className="p-1 mt-5" style={innerColor}>{article}</Card.Text>
+        <Card.Title className="p-3" style={innerColor}>{title}</Card.Title>
+        <Card.Text className="p-1 mt-5" style={innerColor}>{text}</Card.Text>
         </Card.Body>
     </Card>
 

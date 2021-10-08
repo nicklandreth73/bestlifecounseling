@@ -43,13 +43,13 @@ function Heading() {
             >
               <span className="navbar-text">Services</span>
             </Link>
-            <Link
+            <a
               className="navbar-item"
               onClick={() => setExpanded(false)}
-              to="/schedule"
+              href="https://terri-dickens.clientsecure.me/request/service"
             >
               <span className="navbar-text">Schedule</span>
-            </Link>
+            </a>
           </Navbar.Collapse>
         </Navbar>
       </div>

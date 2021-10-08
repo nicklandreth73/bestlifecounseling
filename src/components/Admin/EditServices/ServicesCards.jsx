@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Card from "./Card"
-import {useArticle} from "../../contexts/ArticleContext"
+import {useArticle} from "../../../contexts/ArticleContext"
 
 
 
@@ -104,10 +104,26 @@ export default function ServicesCards ({setEdit}){
 
         <div  className="container h-100 mt-5 services-content">
         <div  className="row my-3 h-35 py-3 services-content">
-        <div   className="card-box col-md mt-2 services-content">
+        <div   className="card-box col-md mt-2 services-content"onClick={(event) => {
+                event.stopPropagation()
+                setEdit({
+                open:true,
+                title: cardOne.title,
+                label: cardOne.label,
+                article: cardOne.article
+            })
+        }}>
         <Card  label={cardOne.label} article={cardOne.article} ></Card>
         </div>
-        <div   className="card-box col-md mt-2 services-content">
+        <div   className="card-box col-md mt-2 services-content"onClick={(event) => {
+                event.stopPropagation()
+                setEdit({
+                open:true,
+                title: cardTwo.title,
+                label: cardTwo.label,
+                article: cardTwo.article
+            })
+        }}>
         <Card label={cardTwo.label} article={cardTwo.article} ></Card>
         </div>
         <div   className="card-box col-md mt-2 services-content" onClick={(event) => {
@@ -123,24 +139,72 @@ export default function ServicesCards ({setEdit}){
         </div>
         </div>
         <div  className="row my-3 h-35 py-3 services-content">
-        <div   className="card-box col-md mt-2 services-content" >
+        <div   className="card-box col-md mt-2 services-content" onClick={(event) => {
+                event.stopPropagation()
+                setEdit({
+                open:true,
+                title: cardFour.title,
+                label: cardFour.label,
+                article: cardFour.article
+            })
+        }}>
         <Card label={cardFour.label} article={cardFour.article}></Card>
         </div>
-        <div   className="card-box col-md mt-2 services-content" >
+        <div   className="card-box col-md mt-2 services-content" onClick={(event) => {
+                event.stopPropagation()
+                setEdit({
+                open:true,
+                title: cardFive.title,
+                label: cardFive.label,
+                article: cardFive.article
+            })
+        }}>
         <Card label={cardFive.label} article={cardFive.article}></Card>
         </div>
-        <div   className="card-box col-md mt-2 services-content">
+        <div   className="card-box col-md mt-2 services-content" onClick={(event) => {
+                event.stopPropagation()
+                setEdit({
+                open:true,
+                title: cardSix.title,
+                label: cardSix.label,
+                article: cardSix.article
+            })
+        }}>
         <Card label={cardSix.label} article={cardSix.article}></Card>
         </div>
         </div>
         <div  className="row my-3 h-35 py-3 services-content">
-        <div   className="card-box col-md mt-2 services-content" >
+        <div   className="card-box col-md mt-2 services-content" onClick={(event) => {
+                event.stopPropagation()
+                setEdit({
+                open:true,
+                title: cardSeven.title,
+                label: cardSeven.label,
+                article: cardSeven.article
+            })
+        }}>
         <Card label={cardSeven.label} article={cardSeven.article}></Card>
         </div>
-        <div   className="card-box col-md mt-2 services-content" >
+        <div   className="card-box col-md mt-2 services-content" onClick={(event) => {
+                event.stopPropagation()
+                setEdit({
+                open:true,
+                title: cardEight.title,
+                label: cardEight.label,
+                article: cardEight.article
+            })
+        }}>
         <Card label={cardEight.label} article={cardEight.article}></Card>
         </div>
-        <div   className="card-box col-md mt-2 services-content" >
+        <div   className="card-box col-md mt-2 services-content" onClick={(event) => {
+                event.stopPropagation()
+                setEdit({
+                open:true,
+                title: cardNine.title,
+                label: cardNine.label,
+                article: cardNine.article
+            })
+        }}>
         <Card label={cardNine.label} article={cardNine.article}></Card>
         </div>
         </div>

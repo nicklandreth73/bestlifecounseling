@@ -1,12 +1,12 @@
 import React, {useState, useEffect} from 'react';
 import Card from "./Card"
 import {Jumbotron} from "react-bootstrap"
-import {useArticle} from "../../contexts/ArticleContext"
+import {useArticle} from "../../../contexts/ArticleContext"
 
 
 
 export default function HomeCards ({setEdit}){
-    const {articleData} = useArticle();
+    const {getArticle, articleData} = useArticle();
 
     const [cardAreaTitle, setCardAreaTitle] = useState("We specialize in")
 
@@ -29,30 +29,32 @@ export default function HomeCards ({setEdit}){
 
 
    
-    useEffect(() =>{
+    useEffect( () =>{
         try {
-        if(articleData){
-        // sets data array to all articles
-        let data = articleData
-        console.log(data)
 
-        // sets title to title article
-        let title =  data.find((article) => article.title === "Card Area Title").label
-        console.log("Title: " + title)
-        setCardAreaTitle(title)
-
-        //sets cards to card articles
-
-        let cardOneData = data.find((article) => article.title === cardOne.title)
-        let cardTwoData = data.find((article) => article.title === cardTwo.title)
-        let cardThreeData = data.find((article) => article.title === cardThree.title)
-
-        setCardOne((prev) => ({cardOneData, ...prev}))
-        setCardTwo((prev) => ({cardTwoData, ...prev}))
-        setCardThree((prev) => ({cardThreeData, ...prev}))
+            if(articleData){
+                // sets data array to all articles
+                let data = articleData
+                console.log(data)
         
-
-        }} 
+                // sets title to title article
+                let title =  data.find((article) => article.title === "Card Area Title").label
+                console.log("Title: " + title)
+                setCardAreaTitle(title)
+        
+                //sets cards to card articles
+        
+                let cardOneData = data.find((article) => article.title === cardOne.title)
+                let cardTwoData = data.find((article) => article.title === cardTwo.title)
+                let cardThreeData = data.find((article) => article.title === cardThree.title)
+        
+                setCardOne((prev) => ({cardOneData, ...prev}))
+                setCardTwo((prev) => ({cardTwoData, ...prev}))
+                setCardThree((prev) => ({cardThreeData, ...prev}))
+                
+        
+                }
+            } 
         catch (error){
           console.log(error)
         }

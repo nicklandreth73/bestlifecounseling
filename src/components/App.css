@@ -105,13 +105,23 @@
 /* About us styles */
 .about-us-container {
   display:block;
-  height: 100vh;
+  height: 120vh;
   width: 100vw;
+}
+.edit-about-us-content{
+  height: 140vh;
+  background-size: cover;
+  background-image: url(images/ground-cover.jpg);
+  background-color: rgba(255,255,255,0.7);
+  background-blend-mode: lighten;
 }
 
 .about-us-content {
   text-align: center;
   background-color: transparent;
+}
+.about-us-image{
+  height: 60vh
 }
 /* Contact Form Styles */
 .form-container {
@@ -186,6 +196,13 @@
   width: 100vw;
   overflow: hidden !important;
   overflow-x: hidden;
+}
+.edit-services-content {
+  height: 140vh;
+  background-size: cover;
+  background-image: url(images/ground-cover.jpg);
+  background-color: rgba(255,255,255,0.7);
+  background-blend-mode: lighten;
 }
 .services-content{
   text-align: center;
@@ -316,11 +333,10 @@ color: #d8d1c8;
   display:none !important;
 }
 .services-main-content{
-  height: 370vh;
+  height: 400vh;
   background-size: 100%;
   background-image: url(images/ground-cover.jpg);
   background-color: rgba(255,255,255,0.7);
   background-blend-mode: lighten;
 }
-
 }

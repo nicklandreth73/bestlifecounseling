@@ -21,14 +21,14 @@ export default function ContactForm() {
     };
     emailjs
       .send(
-        "default_service",
-        "template_nesfipu",
+        "default",
+        "template_cjzv2op",
         templateParams,
-        "user_TLXygmes6KegCbj2RGdPc"
+        "user_2cY2n2TpB40WFkVDzFhxo"
       )
       .then(
         function (response) {
-          alert("Your information has been sent to bestlifecounseling@therapysecure.net.");
+          alert("Your information has been sent to bestlifecounseling@therapysecure.net");
           console.log(response.status, response.text);
           firstNameRef.current.value = "";
           lastNameRef.current.value = "";
@@ -38,7 +38,7 @@ export default function ContactForm() {
         },
         function (error) {
           alert(
-            "There was an error sending your information to bestlifecounseling@therapysecure.net."
+            "There was an error sending your information to bestlifecounseling@therapysecure.net"
           );
           console.log("FAILED...", error);
         }

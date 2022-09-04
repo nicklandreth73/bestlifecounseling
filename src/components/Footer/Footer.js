@@ -142,14 +142,8 @@ export default function Footer() {
             })
           }}
         >
-          <FooterIcon
-            icon="facebook"
-            link="https://www.facebook.com/dickenscounseling/"
-          />
-          <FooterIcon
-            icon="email"
-            link="mailto:bestlifecounseling@therapysecure.net"
-          />
+          <FooterIcon icon="facebook" link={footerLinks.label} />
+          <FooterIcon icon="email" link={footerLinks.article} />
         </div>
       </footer>
     </>

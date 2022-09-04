@@ -144,7 +144,7 @@ export default function Footer() {
           }}
         >
           <FooterIcon icon="facebook" link={footerLinks.label} />
-          <FooterIcon icon="email" link={footerLinks.article} />
+          <FooterIcon icon="email" link={`mailto:${footerLinks.article}`} />
         </div>
       </footer>
     </>

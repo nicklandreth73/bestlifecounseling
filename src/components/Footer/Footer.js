@@ -138,7 +138,8 @@ export default function Footer() {
             setEdit({
               open: !edit.open,
               title: footerLinks.title,
-              label: footerLinks.artice,
+              label: footerLinks.label,
+              article: footerLinks.article,
             })
           }}
         >

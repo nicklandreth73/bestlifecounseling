@@ -52,13 +52,13 @@ export default function Footer() {
         )
 
         setFooterText(footerTextData)
+
+        let footerLinksData = data.find(
+          (article) => article.title === footerLinks.title
+        )
+
+        setFooterLinks(footerLinksData)
       }
-
-      let footerLinksData = data.find(
-        (article) => article.title === footerLinks.title
-      )
-
-      setFooterLinks(footerLinksData)
     } catch (error) {
       console.log(error)
     }

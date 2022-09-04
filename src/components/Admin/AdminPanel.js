@@ -52,12 +52,6 @@ export default function AdminPanel() {
         >
           Edit Services Page
         </Button>
-        <Button
-          className="m-2 btn-primary rounded"
-          onClick={() => history.push("/edit-footer-links")}
-        >
-          Edit Services Page
-        </Button>
       </div>
     </>
   )

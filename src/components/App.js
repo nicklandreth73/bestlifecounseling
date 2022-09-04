@@ -12,7 +12,6 @@ import AdminPanel from "./Admin/AdminPanel"
 import EditHome from "./Admin/EditHome/EditHome"
 import EditAboutUs from "./Admin/EditAboutUs/EditAboutUs"
 import EditServices from "./Admin/EditServices/EditServices"
-import EditFooterLinks from "./Admin/EditServices/EditFooterLinks"
 import PrivateRoute from "./PrivateRoute"
 import { AuthProvider } from "../contexts/AuthContext"
 import { ArticleProvider } from "../contexts/ArticleContext"
@@ -36,10 +35,6 @@ function App() {
               <PrivateRoute path="/edit-home" component={EditHome} />
               <PrivateRoute path="/edit-about-us" component={EditAboutUs} />
               <PrivateRoute path="/edit-services" component={EditServices} />
-              <PrivateRoute
-                path="/edit-footer-links"
-                component={EditFooterLinks}
-              />
             </Switch>
 
             <Footer className="footer" />

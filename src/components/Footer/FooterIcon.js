@@ -24,7 +24,7 @@ export default function FooterIcon({ icon, link }) {
 
   return (
     <>
-      {!currentUser || location.pathname.slice(1, 5) !== "edit" ? (
+      {currentUser || location.pathname.slice(1, 5) === "edit" ? (
         <FontAwesomeIcon className="footer-icon p-1 mx-5" icon={iconType}>
           {" "}
         </FontAwesomeIcon>
